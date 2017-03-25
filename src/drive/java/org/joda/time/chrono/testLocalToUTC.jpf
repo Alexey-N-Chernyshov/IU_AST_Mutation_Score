@@ -1,3 +1,0 @@
-@include=./DriveZonedChronology.jpf
-
-concolic.method=testLocalToUTC

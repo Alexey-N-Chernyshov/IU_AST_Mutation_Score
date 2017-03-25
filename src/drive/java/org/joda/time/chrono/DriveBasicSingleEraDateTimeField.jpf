@@ -1,0 +1,6 @@
+@include=jdart.jpf
+
+target=org.joda.time.chrono.DriveBasicSingleEraDateTimeField
+
+concolic.method.testSet=org.joda.time.chrono.DriveBasicSingleEraDateTimeField.testSet(instant: long, era: int)
+concolic.method.testSet.config = testSet

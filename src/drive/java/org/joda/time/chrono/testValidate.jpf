@@ -1,3 +1,0 @@
-@include=./DriveBaseChronology.jpf
-
-concolic.method=testValidate
