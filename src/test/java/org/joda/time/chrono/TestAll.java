@@ -48,6 +48,7 @@ public class TestAll extends TestCase {
         suite.addTest(TestISOChronology.suite());
         suite.addTest(TestLenientChronology.suite());
         suite.addTest(TestGJDate.suite());
+        suite.addTest(TestBasicSingleEraDateTimeField.suite());
         
         return suite;
     }
