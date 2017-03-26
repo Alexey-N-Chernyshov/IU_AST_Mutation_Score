@@ -1,0 +1,30 @@
+@include=jdart.jpf
+
+target=org.joda.time.chrono.DriveISOYearOfEraDateTimeField
+
+concolic.method.test_get=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_get(instant: long)
+concolic.method.test_get.config = test_get
+
+concolic.method.test_add=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_add(instant: long, years: int)
+concolic.method.test_add.config = test_add
+
+concolic.method.test_add2=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_add2(instant: long, years: long)
+concolic.method.test_add2.config = test_add2
+
+concolic.method.test_addWrapField=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_addWrapField(instant: long, years: int)
+concolic.method.test_addWrapField.config = test_addWrapField
+
+concolic.method.test_getDifference=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_getDifference(minuendInstant: long, subtrahendInstant: long)
+concolic.method.test_getDifference.config = test_getDifference
+
+concolic.method.test_getDiffernceAsLong=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_getDiffferenceAsLong(minuendInstand: long, subtrahendInstant: long)
+concolic.method.test_getDifferenceAsLong.config = test_getDifferenceAsLong
+
+concolic.method.test_set=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_set(instant: long, year: int)
+concolic.method.test_set.config = test_set
+
+concolic.method.test_roundCeiling=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_roundCeiling(instant: long)
+concolic.method.test_roundCeiling.config = test_roundCeiling
+
+concolic.method.test_remainder=org.joda.time.chrono.DriveISOYearOfEraDateTimeField.test_remainder(instant: long)
+concolic.method.test_remainder.config = test_remainder
