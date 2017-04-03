@@ -1,0 +1,11 @@
+@using = jpf-jdart
+
+shell=gov.nasa.jpf.jdart.JDart
+
+log.finest=jdart
+log.info=constraints
+
+symbolic.dp=z3
+symbolic.dp.z3.bitvectors=true
+
+jdart.configs.all_fields_symbolic.symbolic.include=this.*
