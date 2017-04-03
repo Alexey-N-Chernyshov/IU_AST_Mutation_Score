@@ -21,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import junit.framework.Assert;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -811,4 +812,480 @@ public class TestDateTimeFormatterBuilder extends TestCase {
         assertEquals(expected, out.toString());
     }
 
+    //-----------------------------------------------------------------------
+    public void test_appendFractionOfMinute() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfMinute_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(1, 2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfMinute_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(22, 1073741843);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfMinute_4() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(0, 0);
+            fail("no exception");
+        }
+        catch (Exception ex){
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfMinute_5() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(-2147483647, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfMinute_6() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(2, 0);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfMinute_7() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(19, 1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfMinute_8() {
+        try{
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfMinute(0, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendFractionOfHour() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfHour_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(2, 1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfHour_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(1073741843, 22);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfHour_4() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(0, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfHour_5() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(-2147483648, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfHour_6() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(1073741843, 22);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfHour_7() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(0, 2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfHour_8() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(1, 19);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfHour_9() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfHour(-2147483647, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendFractionOfDay() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfDay_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(2, 1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfDay_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(1073741843, 22);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfDay_4() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(0, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfDay_5() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(-2147483648, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendFractionOfDay_7() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(0, 2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfDay_8() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(1, 19);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendFractionOfDay_9() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendFractionOfDay(-2147483647, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendMillisOfSecond() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfSecond(-2147483614);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendMillisOfSecond_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfSecond(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMillisOfSecond_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfSecond(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMillisOfSecond_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfSecond(4);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendMillisOfDay() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfDay(-2147483638);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendMillisOfDay_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfDay(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMillisOfDay_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfDay(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMillisOfDay_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMillisOfDay(10);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendSecondOfMinute() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendSecondOfMinute(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendSecondOfMinute_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendSecondOfMinute(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendSecondOfMinute_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendSecondOfMinute(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendSecondOfMinute_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendSecondOfMinute(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendMinuteOfHour() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfHour(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendMinuteOfHour_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfHour(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMinuteOfHour_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfHour(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMinuteOfHour_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfHour(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendMinuteOfDay() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfDay(-2147483642);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendMinuteOfDay_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfDay(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMinuteOfDay_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfDay(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMinuteOfDay_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMinuteOfDay(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendHourOfDay() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendHourOfDay(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendHourOfDay_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfDay(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendHourOfDay_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfDay(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendHourOfDay_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfDay(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendClockhourOfDay() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendClockhourOfDay(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendClockhourOfDay_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendClockhourOfDay(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendClockhourOfDay_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendClockhourOfDay(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendClockhourOfDay_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendClockhourOfDay(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendHourOfHalfday() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendHourOfHalfday(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendHourOfHalfday_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfHalfday(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendHourOfHalfday_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfHalfday(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendHourOfHalfday_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendHourOfHalfday(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendDayOfWeek() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(-2147483392);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendDayOfWeek_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendDayOfWeek_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
 }
