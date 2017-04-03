@@ -1,0 +1,29 @@
+@include=jdart.jpf
+
+target=org.joda.time.format.DriveDateTimeFormatterBuilder
+
+concolic.method.test_appendFractionOfMinute=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendFractionOfMinute(minDigits: int, maxDigits: int)
+concolic.method.test_appendFractionOfMinute.config = test_appendFractionOfMinute
+concolic.method.test_appendFractionOfHour=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendFractionOfHour(minDigits: int, maxDigits: int)
+concolic.method.test_appendFractionOfHour.config = test_appendFractionOfHour
+concolic.method.test_appendFractionOfDay=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendFractionOfDay(minDigits: int, maxDigits: int)
+concolic.method.test_appendFractionOfDay.config = test_appendFractionOfDay
+concolic.method.test_appendMillisOfSecond=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendMillisOfSecond(minDigits: int)
+concolic.method.test_appendMillisOfSecond.config = test_appendMillisOfSecond
+concolic.method.test_appendMillisOfDay=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendMillisOfDay(minDigits: int)
+concolic.method.test_appendMillisOfDay.config = test_appendMillisOfDay
+concolic.method.test_appendSecondOfMinute=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendSecondOfMinute(minDigits: int)
+concolic.method.test_appendSecondOfMinute.config = test_appendSecondOfMinute
+concolic.method.test_appendMinuteOfHour=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendMinuteOfHour(minDigits: int)
+concolic.method.test_appendMinuteOfHour.config = test_appendMinuteOfHour
+concolic.method.test_appendMinuteOfDay=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendMinuteOfDay(minDigits: int)
+concolic.method.test_appendMinuteOfDay.config = test_appendMinuteOfDay
+concolic.method.test_appendHourOfDay=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendHourOfDay(minDigits: int)
+concolic.method.test_appendHourOfDay.config = test_appendHourOfDay
+concolic.method.test_appendClockhourOfDay=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendClockhourOfDay(minDigits: int)
+concolic.method.test_appendClockhourOfDay.config = test_appendClockhourOfDay
+concolic.method.test_appendHourOfHalfday=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendHourOfHalfday(minDigits: int)
+concolic.method.test_appendHourOfHalfday.config = test_appendHourOfHalfday
+concolic.method.test_appendDayOfWeek=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendDayOfWeek(minDigits: int)
+concolic.method.test_appendDayOfWeek.config = test_appendDayOfWeek
+
