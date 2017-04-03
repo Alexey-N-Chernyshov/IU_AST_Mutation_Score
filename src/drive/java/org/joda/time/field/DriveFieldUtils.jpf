@@ -1,0 +1,16 @@
+@include=jdart.jpf
+
+target=org.joda.time.format.DriveFieldUtils
+
+concolic.method.test_safeMultiply_int=org.joda.time.format.DriveFieldUtils.test_safeMultiply_int(val1: int, val2: int)
+concolic.method.test_safeMultiply_int.config = test_safeMultiply_int
+concolic.method.test_safeMultiply_long=org.joda.time.format.DriveFieldUtils.test_safeMultiply_long(val1: long, val2: long)
+concolic.method.test_safeMultiply_long.config = test_safeMultiply_long
+concolic.method.test_safeToInt=org.joda.time.format.DriveFieldUtils.test_safeToInt(value: long)
+concolic.method.test_safeToInt.config = test_safeToInt
+concolic.method.test_safeMultiplyToInt=org.joda.time.format.DriveFieldUtils.test_safeMultiplyToInt(val1: long, val2: long)
+concolic.method.test_safeMultiplyToInt.config = test_safeMultiplyToInt
+concolic.method.test_getWrappedValue=org.joda.time.format.DriveFieldUtils.test_getWrappedValue(value: int, minValue: int, maxValue: int)
+concolic.method.test_getWrappedValue.config = test_getWrappedValue
+
+
