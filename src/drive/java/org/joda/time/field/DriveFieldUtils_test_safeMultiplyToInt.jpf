@@ -1,3 +1,0 @@
-@include = ./DriveFieldUtils.jpf
-
-concolic.method = test_safeMultiplyToInt
