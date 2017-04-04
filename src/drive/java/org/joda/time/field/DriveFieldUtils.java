@@ -8,8 +8,13 @@ class DriveFieldUtils {
         FieldUtils.safeMultiply(val1, val2);
     }
 
+    public static void test_safeMultiplyLong(long val1, long val2) {
+        FieldUtils.safeMultiply(val1, val2);
+    }
+
 
     public static void main(String[] args) {
         test_safeMultiplyInt(1, 2);
+        test_safeMultiplyLong(1L, 2L);
     }
 }
