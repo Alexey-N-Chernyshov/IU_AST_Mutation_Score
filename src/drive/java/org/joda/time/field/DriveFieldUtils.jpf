@@ -1,0 +1,6 @@
+@include=jdart.jpf
+
+target=org.joda.time.field.DriveFieldUtils
+
+concolic.method.test_safeMultiplyInt=org.joda.time.field.DriveFieldUtils.test_safeMultiplyInt(val1: int, val2: int)
+concolic.method.testSet.config = test_safeMultiplyInt
