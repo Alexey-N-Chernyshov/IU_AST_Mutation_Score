@@ -8,4 +8,13 @@ concolic.method.testSet.config = test_safeMultiplyInt
 concolic.method.test_safeMultiplyLong=org.joda.time.field.DriveFieldUtils.test_safeMultiplyLong(val1: long, val2: long)
 concolic.method.testSet.config = test_safeMultiplyLong
 
+concolic.method.test_safeToInt=org.joda.time.field.DriveFieldUtils.test_safeToInt(value: long)
+concolic.method.testSet.config = test_safeToInt
+
+concolic.method.test_getWrappedValue=org.joda.time.field.DriveFieldUtils.test_getWrappedValue(value: int, minValue: int, maxValue: int)
+concolic.method.testSet.config = test_getWrappedValue
+
+concolic.method.test_safeMultiplyToInt=org.joda.time.field.DriveFieldUtils.test_safeMultiplyToInt(val1: long, val2: long)
+concolic.method.testSet.config = test_safeMultiplyToInt
+
 
