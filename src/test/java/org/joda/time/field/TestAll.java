@@ -45,6 +45,8 @@ public class TestAll extends TestCase {
         suite.addTest(TestFieldUtils.suite());
 
         suite.addTest(TestBaseDateTimeField.suite());
+        suite.addTest(TestDividedDateTimeField.suite());
+
         suite.addTest(TestOffsetDateTimeField.suite());
         suite.addTest(TestPreciseDurationDateTimeField.suite());
         suite.addTest(TestPreciseDateTimeField.suite());
