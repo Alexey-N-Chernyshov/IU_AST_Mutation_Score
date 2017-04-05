@@ -21,36 +21,19 @@ public class DriveDividedDateTimeField {
         rdtf.add(instant, value);
     }
 
-    static void set(long instant, int value) {
-        rdtf.set(instant, value);
-    }
-
     static void addWrapField(long instant, int amount) {
 
         rdtf.addWrapField(instant, amount);
     }
 
-    static void getDifference(long minuendInstant, long subtrahendInstant) {
-            rdtf.getDifference(minuendInstant,subtrahendInstant);
-    }
 
-    static void getDifferenceAsLong(long minuendInstant, long subtrahendInstant){
-            rdtf.getDifferenceAsLong(minuendInstant,subtrahendInstant);
-    }
-
-    static void remainder(long instant){
-        rdtf.remainder(instant);
-    }
+    static void roundFloor(long instant){rdtf.roundFloor(instant);}
 
     public static void main(String[] args) {
         add(1L, 2);
         add2(1L, 2L);
-        set(1L,2);
         addWrapField(1L,2);
-        remainder(10L);
-        getDifference(1L,1L);
-        getDifferenceAsLong(1L,1L);
-
+        roundFloor(1L);
     }
 
 
