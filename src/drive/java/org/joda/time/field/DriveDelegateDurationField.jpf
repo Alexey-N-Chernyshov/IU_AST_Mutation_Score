@@ -2,8 +2,8 @@
 
 target=org.joda.time.field.DriveDelegateDurationField
 
-concolic.method.getName=org.joda.time.field.DriveDelegateDurationField.getName()
-concolic.method.getName.config = getName
+concolic.method.add=org.joda.time.field.DriveDelegateDurationField.add(instant: Long, value:int)
+concolic.method.add.config = add
 
-concolic.method.getType=org.joda.time.field.DriveDelegateDurationField.getType()
-concolic.method.getType.config = getType
+concolic.method.add2=org.joda.time.field.DriveDelegateDurationField.add2(instant: Long, value:int)
+concolic.method.add2.config = add2

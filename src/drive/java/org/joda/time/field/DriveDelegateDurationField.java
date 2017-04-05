@@ -17,9 +17,21 @@ public class DriveDelegateDurationField {
         ddf.getType();
     }
 
+    static void add(Long instant, int value)
+    {
+        ddf.add(instant, value);
+    }
+
+    static void add2(Long instant, Long value)
+    {
+        ddf.add(instant,value);
+    }
+
     public static void main(String[] args) {
         getName();
         getType();
+        add(1L, 2);
+        add2(1L,2L);
 
     }
 
