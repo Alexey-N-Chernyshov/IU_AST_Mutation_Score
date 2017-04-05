@@ -23,6 +23,8 @@ class DriveDateTimeFormatterBuilder {
         test_appendClockhourOfDay(1);
         test_appendHourOfHalfday(1);
         test_appendDayOfWeek(1);
+	test_appendYearOfCentury(1, 1);
+	test_appendCenturyOfEra(1, 1);    
     }
 
     // line 632
@@ -91,4 +93,16 @@ class DriveDateTimeFormatterBuilder {
         tested.appendDayOfWeek(minDigits);
     }
 
+  
+    //line 934
+    public static void test_appendYearOfCentury(int minDigits, int maxDigits) {
+	DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendYearOfCentury(minDigits, maxDigits);
+    }
+    
+    //line 946
+    public static void test_appendCenturyOfEra(int minDigits, int maxDigits) {
+	DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendCenturyOfEra(minDigits, maxDigits);
+    }
 }
