@@ -47,7 +47,7 @@ public class DriveDividedDateTimeField {
         add2(1L, 2L);
         set(1L,2);
         addWrapField(1L,2);
-        remainder(1L);
+        remainder(10L);
         getDifferenceAsLong(1L,1L);
         getDifferenceAsLong(1L,1L);
 
