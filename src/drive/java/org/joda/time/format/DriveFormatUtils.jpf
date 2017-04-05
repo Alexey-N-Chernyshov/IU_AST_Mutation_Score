@@ -1,0 +1,7 @@
+@include=jdart.jpf
+
+target=org.joda.time.format.DriveFormatUtils
+
+concolic.method.test_calculateDigitCount=org.joda.time.format.DriveFormatUtils.test_calculateDigitCount(value: long)
+concolic.method.test_calculateDigitCount.config = test_calculateDigitCount
+

@@ -53,6 +53,8 @@ public class TestAll extends TestCase {
 
         suite.addTest(TestTextFields.suite());
 
+        suite.addTest(TestFormatUtils.suite());
+
         return suite;
     }
 

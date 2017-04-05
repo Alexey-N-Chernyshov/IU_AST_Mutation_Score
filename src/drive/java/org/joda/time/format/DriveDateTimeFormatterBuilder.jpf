@@ -26,4 +26,7 @@ concolic.method.test_appendHourOfHalfday=org.joda.time.format.DriveDateTimeForma
 concolic.method.test_appendHourOfHalfday.config = test_appendHourOfHalfday
 concolic.method.test_appendDayOfWeek=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendDayOfWeek(minDigits: int)
 concolic.method.test_appendDayOfWeek.config = test_appendDayOfWeek
-
+concolic.method.test_appendYearOfCentury=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendYearOfCentury(minDigits: int, maxDigits: int)
+concolic.method.test_appendYearOfCentury.config = test_appendYearOfCentury
+concolic.method.test_appendCenturyOfEra=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendCenturyOfEra(minDigits: int, maxDigits: int)
+concolic.method.test_appendCenturyOfEra.config = test_appenCenturyOfEra
