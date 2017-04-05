@@ -1288,4 +1288,34 @@ public class TestDateTimeFormatterBuilder extends TestCase {
         DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(1);
         Assert.assertEquals(res, formatterBuilder);
     }
+
+    //-----------------------------------------------------------------------
+    public void test_appendDayOfYear() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendDayOfYear(-2147483614);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendDayOfYear_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendDayOfYear_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendDayOfYear_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(4);
+        Assert.assertEquals(res, formatterBuilder);
+    }
 }

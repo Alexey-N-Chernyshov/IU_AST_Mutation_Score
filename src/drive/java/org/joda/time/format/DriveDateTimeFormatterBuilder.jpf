@@ -26,4 +26,5 @@ concolic.method.test_appendHourOfHalfday=org.joda.time.format.DriveDateTimeForma
 concolic.method.test_appendHourOfHalfday.config = test_appendHourOfHalfday
 concolic.method.test_appendDayOfWeek=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendDayOfWeek(minDigits: int)
 concolic.method.test_appendDayOfWeek.config = test_appendDayOfWeek
-
+concolic.method.test_appendDayOfYear=org.joda.time.format.DriveDateTimeFormatterBuilder.test_appendDayOfYear(minDigits: int)
+concolic.method.test_appendDayOfYear.config = test_appendDayOfYear

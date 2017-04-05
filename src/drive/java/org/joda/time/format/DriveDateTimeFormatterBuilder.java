@@ -23,6 +23,7 @@ class DriveDateTimeFormatterBuilder {
         test_appendClockhourOfDay(1);
         test_appendHourOfHalfday(1);
         test_appendDayOfWeek(1);
+	test_appendDayOfYear(1);
     }
 
     // line 632
@@ -89,6 +90,11 @@ class DriveDateTimeFormatterBuilder {
     public static void test_appendDayOfWeek(int minDigits) {
         DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
         tested.appendDayOfWeek(minDigits);
+    }
+
+    public static void test_appendDayOfYear(int minDigits) {
+        DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendDayOfYear(minDigits);
     }
 
 }
