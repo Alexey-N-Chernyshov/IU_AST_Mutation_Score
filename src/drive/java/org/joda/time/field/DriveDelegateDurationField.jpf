@@ -1,9 +1,0 @@
-@include=jdart.jpf
-
-target=org.joda.time.field.DriveDelegateDurationField
-
-concolic.method.add=org.joda.time.field.DriveDelegateDurationField.add(instant: Long, value:int)
-concolic.method.add.config = add
-
-concolic.method.add2=org.joda.time.field.DriveDelegateDurationField.add2(instant: Long, value:Long)
-concolic.method.add2.config = add2

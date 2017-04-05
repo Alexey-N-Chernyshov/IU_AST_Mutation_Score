@@ -1,3 +1,0 @@
-@include = ./DriveDelegateDurationField.jpf
-
-concolic.method = add2
