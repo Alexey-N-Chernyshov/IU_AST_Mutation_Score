@@ -1,0 +1,9 @@
+@include=jdart.jpf
+
+target=org.joda.time.field.DriveDelegateDurationField
+
+concolic.method.getName=org.joda.time.field.DriveDelegateDurationField.getName()
+concolic.method.getName.config = getName
+
+concolic.method.getType=org.joda.time.field.DriveDelegateDurationField.getType()
+concolic.method.getType.config = getType

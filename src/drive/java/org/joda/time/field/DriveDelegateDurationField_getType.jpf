@@ -1,0 +1,3 @@
+@include = ./DriveDelegateDurationField.jpf
+
+concolic.method = getType
