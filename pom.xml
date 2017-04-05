@@ -324,6 +324,10 @@
             <param>org.joda.time*</param>
             <!--param>org.joda.time.chrono.ZonedChronology</param-->
           </targetClasses>
+          <excludedClasses>
+            <param>org.joda.time.format.Drive*</param>
+            <param>org.joda.time.chrono.Drive*</param>
+          </excludedClasses>>
           <targetTests>
             <param>org.joda.time*</param>
           </targetTests>
