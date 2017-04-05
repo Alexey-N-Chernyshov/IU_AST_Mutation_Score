@@ -1289,6 +1289,151 @@ public class TestDateTimeFormatterBuilder extends TestCase {
         Assert.assertEquals(res, formatterBuilder);
     }
 
+    public void test_appendYearOfCentury_1(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendYearOfCentury(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+    public void test_appendYearOfCentury_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfCentury(3, 1073741824);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfCentury_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfCentury(1, 1);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfCentury_4() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendYearOfCentury(0, 0);
+            fail("no exception");
+        }
+            catch (Exception e) {
+            assertTrue(true);
+        }
+
+    }
+
+    public void test_appendYearOfCentury_5(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendYearOfCentury(-2147483647, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+    public void test_appendYearOfCentury_6() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfCentury(2, 0);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfCentury_7() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfCentury(1, -2147483647);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfCentury_8() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendYearOfCentury(0, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+
+    public void test_appendCenturyOfEra_1(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendCenturyOfEra(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+    public void test_appendCenturyOfEra_2(){
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendCenturyOfEra(1073741824, 3);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendCenturyOfEra_3(){
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendCenturyOfEra(1, 1);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendCenturyOfEra_4(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendCenturyOfEra(0, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+    public void test_appendCenturyOfEra_5(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendCenturyOfEra(-2147483648, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+
+    public void test_appendCenturyOfEra_6(){
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendCenturyOfEra(0, 2);
+        assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendCenturyOfEra_7(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendCenturyOfEra(-2147483648, 1);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+    public void test_appendCenturyOfEra_8(){
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            formatterBuilder.appendCenturyOfEra(-2147483648, 0);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            assertTrue(true);
+        }
+    }
+
+
     //-----------------------------------------------------------------------
     public void test_appendDayOfYear() {
         try {
@@ -1483,5 +1628,5 @@ public class TestDateTimeFormatterBuilder extends TestCase {
         catch (Exception e) {
             Assert.assertTrue(true);
         }
-    } 
+    }
 }
