@@ -59,5 +59,24 @@ public class TestDividedDateTimeField extends TestCase {
         assertEquals(5,rdtf.getDivisor());
     }
 
+    public void test_addWrapField(){
+        DividedDateTimeField rdtf = new DividedDateTimeField(
+                DateTimeFieldType.dayOfMonth().getField(IslamicChronology.getInstance()),
+                null,
+                DateTimeFieldType.dayOfMonth(),
+                5);
 
+        assertEquals(-42247573292928L,rdtf.addWrapField(-42246709292928L,-1879048194));
+    }
+
+    public void test_set(){
+        DividedDateTimeField rdtf = new DividedDateTimeField(
+                DateTimeFieldType.dayOfMonth().getField(IslamicChronology.getInstance()),
+                null,
+                DateTimeFieldType.dayOfMonth(),
+                5);
+
+        assertEquals(-42274030818304L,rdtf.set(-42272734818304L,0));
+
+    }
 }
