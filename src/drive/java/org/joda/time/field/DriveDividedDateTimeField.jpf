@@ -10,6 +10,3 @@ concolic.method.add2.config = add2
 
 concolic.method.addWrapField=org.joda.time.field.DriveDividedDateTimeField.addWrapField(instant: long, value: int)
 concolic.method.addWrapField.config = addWrapField
-
-concolic.method.roundFloor=org.joda.time.field.DriveDividedDateTimeField.roundFloor(instant: long)
-concolic.method.roundFloor.config = roundFloor

@@ -26,14 +26,10 @@ public class DriveDividedDateTimeField {
         rdtf.addWrapField(instant, amount);
     }
 
-
-    static void roundFloor(long instant){rdtf.roundFloor(instant);}
-
     public static void main(String[] args) {
         add(1L, 2);
         add2(1L, 2L);
         addWrapField(1L,2);
-        roundFloor(1L);
     }
 
 
