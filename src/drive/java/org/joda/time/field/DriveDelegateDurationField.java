@@ -9,14 +9,6 @@ public class DriveDelegateDurationField {
 
     static private DelegatedDurationField ddf = (DelegatedDurationField) DurationFieldType.seconds().getField(IslamicChronology.getInstance());
 
-    static void getName() {
-        ddf.getName();
-    }
-
-    static void getType() {
-        ddf.getType();
-    }
-
     static void add(Long instant, int value)
     {
         ddf.add(instant, value);
@@ -28,11 +20,8 @@ public class DriveDelegateDurationField {
     }
 
     public static void main(String[] args) {
-        getName();
-        getType();
         add(1L, 2);
         add2(1L,2L);
-
     }
 
 
