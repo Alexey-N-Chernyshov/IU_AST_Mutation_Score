@@ -8,8 +8,17 @@ concolic.method.add.config = add
 concolic.method.add2=org.joda.time.field.DriveDividedDateTimeField.add2(instant: long, value: long)
 concolic.method.add2.config = add2
 
-concolic.method.get=org.joda.time.field.DriveDividedDateTimeField.get(instant: long)
-concolic.method.get.config = get
+concolic.method.set=org.joda.time.field.DriveDividedDateTimeField.set(instant: long, value: int)
+concolic.method.set.config = set
 
-concolic.method.roundFloor=org.joda.time.field.DriveDividedDateTimeField.roundFloor(instant: long)
-concolic.method.roundFloor.config = roundFloor
+concolic.method.remainder=org.joda.time.field.DriveDividedDateTimeField.remainder(instant: long)
+concolic.method.remainder.config = remainder
+
+concolic.method.addWrapField=org.joda.time.field.DriveDividedDateTimeField.addWrapField(instant: long, value: int)
+concolic.method.addWrapField.config = addWrapField
+
+concolic.method.getDifference=org.joda.time.field.DriveDividedDateTimeField.getDifference(minuendInstant: long, subtrahendInstant: long)
+concolic.method.getDifference.config = getDifference
+
+concolic.method.getDifferenceAsLong=org.joda.time.field.DriveDividedDateTimeField.getDifferenceAsLong(minuendInstant: long, subtrahendInstant: long)
+concolic.method.getDifferenceAsLong.config = getDifferenceAsLong

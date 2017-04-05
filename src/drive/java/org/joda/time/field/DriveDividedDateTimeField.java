@@ -12,9 +12,6 @@ public class DriveDividedDateTimeField {
             DateTimeFieldType.dayOfMonth(),
             5);
 
-    static void get(long instant) {
-        rdtf.get(instant);
-    }
 
     static void add(long instant, int value) {
         rdtf.add(instant, value);
@@ -24,16 +21,34 @@ public class DriveDividedDateTimeField {
         rdtf.add(instant, value);
     }
 
-    static void roundFloor(long instant) {
-        rdtf.roundFloor(instant);
+    static void set(long instant, int value) {
+        rdtf.set(instant, value);
     }
 
+    static void addWrapField(long instant, int amount) {
+
+        rdtf.addWrapField(instant, amount);
+    }
+
+    static void getDifference(long minuendInstant, long subtrahendInstant) {
+            rdtf.getDifference(minuendInstant,subtrahendInstant);
+    }
+
+    static void getDifferenceAsLong(long minuendInstant, long subtrahendInstant){
+            rdtf.getDifferenceAsLong(minuendInstant,subtrahendInstant);
+    }
+
+    static void remainder(long instant){
+        rdtf.remainder(instant);
+    }
 
     public static void main(String[] args) {
-        get(1L);
         add(1L, 2);
         add2(1L, 2L);
-        roundFloor(1L);
+        set(1L,2);
+        addWrapField(1L,2);
+        remainder(1L);
+
     }
 
 

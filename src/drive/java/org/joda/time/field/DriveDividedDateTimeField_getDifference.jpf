@@ -1,3 +1,3 @@
 @include = ./DriveDividedDateTimeField.jpf
 
-concolic.method = get
+concolic.method = getDifference
