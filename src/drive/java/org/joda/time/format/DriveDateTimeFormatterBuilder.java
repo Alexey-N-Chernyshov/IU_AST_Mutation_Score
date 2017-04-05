@@ -24,6 +24,10 @@ class DriveDateTimeFormatterBuilder {
         test_appendHourOfHalfday(1);
         test_appendDayOfWeek(1);
 	test_appendDayOfYear(1);
+	test_appendWeekOfWeekyear(1);
+	test_appendWeekyear(1, 1);
+	test_appendMonthOfYear(1);
+	test_appendYearOfEra(1, 1);
     }
 
     // line 632
@@ -92,9 +96,34 @@ class DriveDateTimeFormatterBuilder {
         tested.appendDayOfWeek(minDigits);
     }
 
+    // line 786
     public static void test_appendDayOfYear(int minDigits) {
         DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
         tested.appendDayOfYear(minDigits);
+    }
+
+    // line 796
+    public static void test_appendWeekOfWeekyear(int minDigits) {
+        DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendWeekOfWeekyear(minDigits);
+    }
+
+    // line 808
+    public static void test_appendWeekyear(int minDigits, int maxDigits) {
+        DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendWeekyear(minDigits, maxDigits);
+    }
+
+    // line 818
+    public static void test_appendMonthOfYear(int minDigits) {
+        DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendMonthOfYear(minDigits);
+    }
+
+    // line 922
+    public static void test_appendYearOfEra(int minDigits, int maxDigits) {
+        DateTimeFormatterBuilder tested = new DateTimeFormatterBuilder();
+        tested.appendYearOfEra(minDigits, maxDigits);
     }
 
 }

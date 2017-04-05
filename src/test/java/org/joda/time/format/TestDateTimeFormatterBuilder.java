@@ -1318,4 +1318,170 @@ public class TestDateTimeFormatterBuilder extends TestCase {
         DateTimeFormatterBuilder res = formatterBuilder.appendDayOfWeek(4);
         Assert.assertEquals(res, formatterBuilder);
     }
+
+    //-----------------------------------------------------------------------
+    public void test_appendMonthOfYear() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendMonthOfYear(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendMonthOfYear_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMonthOfYear(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMonthOfYear_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMonthOfYear(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendMonthOfYear_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendMonthOfYear(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendWeekOfWeekyear() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendWeekOfWeekyear(-2147483630);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendWeekOfWeekyear_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekOfWeekyear(2);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendWeekOfWeekyear_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekOfWeekyear(1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendWeekOfWeekyear_4() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekOfWeekyear(6);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+
+
+    //-----------------------------------------------------------------------
+    public void test_appendWeekyear() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendWeekyear_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(3, 1073741824);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendWeekyear_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(1, 1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendWeekyear_5() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(-2147483647, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendWeekyear_6() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(2, 0);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendWeekyear_8() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendWeekyear(0, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    //-----------------------------------------------------------------------
+    public void test_appendYearOfEra() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(-2147483648, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendYearOfEra_2() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(3, 1073741824);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfEra_3() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(1, 1);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfEra_5() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(-2147483647, -2147483648);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    }
+
+    public void test_appendYearOfEra_6() {
+        DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+        DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(2, 0);
+        Assert.assertEquals(res, formatterBuilder);
+    }
+
+    public void test_appendYearOfEra_8() {
+        try {
+            DateTimeFormatterBuilder formatterBuilder = new DateTimeFormatterBuilder();
+            DateTimeFormatterBuilder res = formatterBuilder.appendYearOfEra(0, -2147483647);
+            fail("no exception");
+        }
+        catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+    } 
 }
