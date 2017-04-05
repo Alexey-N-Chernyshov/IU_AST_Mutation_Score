@@ -99,8 +99,19 @@ public class TestPreciseDurationField extends TestCase {
         assertEquals(12345, iField.getValue(12345678L));
         assertEquals(-1, iField.getValue(-1234L));
         assertEquals(INTEGER_MAX, iField.getValue(LONG_INTEGER_MAX * 1000L + 999L));
+        long LONG_INTEGER_MIN = Integer.MIN_VALUE;
+        assertEquals(Integer.MIN_VALUE, iField.getValue(LONG_INTEGER_MIN * 1000L - 999L));
         try {
             iField.getValue(LONG_INTEGER_MAX * 1000L + 1000L);
+            fail();
+        } catch (ArithmeticException ex) {}
+    }
+
+    public void test_getValue_long_minValue() {
+        long min_integer = Integer.MIN_VALUE;
+        assertEquals(Integer.MIN_VALUE, iField.getValue(min_integer * 1000L - 999L));
+        try {
+            iField.getValue(min_integer * 1000L - 1000L);
             fail();
         } catch (ArithmeticException ex) {}
     }
