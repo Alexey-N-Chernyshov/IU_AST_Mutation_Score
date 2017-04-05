@@ -1,4 +1,4 @@
-package java.org.joda.time.field;
+package org.joda.time.field;
 
 import org.joda.time.DurationFieldType;
 
@@ -7,15 +7,18 @@ import org.joda.time.field.DelegatedDurationField;
 
 public class DriveDelegateDurationField {
 
-    static private DelegatedDurationField ddf = (DelegatedDurationField) DurationFieldType.seconds().getField(IslamicChronology.getInstance());
-
     static void add(Long instant, int value)
     {
+        DelegatedDurationField ddf = (DelegatedDurationField) DurationFieldType.seconds()
+                .getField(IslamicChronology.getInstance());
+
         ddf.add(instant, value);
     }
 
     static void add2(Long instant, Long value)
     {
+        DelegatedDurationField ddf = (DelegatedDurationField) DurationFieldType.seconds()
+                .getField(IslamicChronology.getInstance());
         ddf.add(instant,value);
     }
 
