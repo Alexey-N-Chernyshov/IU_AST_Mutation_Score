@@ -12,22 +12,28 @@ public class DriveDividedDateTimeField {
             DateTimeFieldType.dayOfMonth(),
             5);
 
-    static void get(Long instant) {
+    static void get(long instant) {
         rdtf.get(instant);
     }
 
-    static void add(Long instant, int value) {
+    static void add(long instant, int value) {
         rdtf.add(instant, value);
     }
 
-    static void add2(Long instant, Long value) {
+    static void add2(long instant, long value) {
         rdtf.add(instant, value);
     }
+
+    static void roundFloor(long instant) {
+        rdtf.roundFloor(instant);
+    }
+
 
     public static void main(String[] args) {
         get(1L);
         add(1L, 2);
         add2(1L, 2L);
+        roundFloor(1L);
     }
 
 
